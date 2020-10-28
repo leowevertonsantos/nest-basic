@@ -1,8 +1,8 @@
 export interface PlayersI {
 
-    _id: string;
-    cellPhone: string;
-    email: string;
+    readonly _id: string;
+    readonly cellPhone: string;
+    readonly email: string;
     name: string;
     ranking: string;
     rankingPosition: number;

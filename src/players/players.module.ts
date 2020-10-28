@@ -1,8 +1,10 @@
-import { Module, Post } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { PlayersController } from './players.controller';
+import { PlayersService } from './services/players.service';
 
 @Module({
-  controllers: [PlayersController]
+  controllers: [PlayersController],
+  providers: [PlayersService]
 })
 export class PlayersModule {
 
