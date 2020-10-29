@@ -28,7 +28,7 @@ export class PlayersController {
     }
 
     @Delete(':email')
-    public async deletePlayer(@Param('email') email: string): Promise<void> {
+    public async deletePlayer(@Param('email') email: string): Promise<PlayersI> {
         return await this.playersService.deletePlayer(email);
     }
 }

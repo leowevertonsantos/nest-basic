@@ -7,7 +7,15 @@ import { PlayersModule } from './players/players.module';
 @Module({
   imports: [
     PlayersModule,
-    MongooseModule.forRoot('mongodb+srv://smartranking:TRODZkhL1nuI2WkD@rankingnestjs.jidav.mongodb.net/test?retryWrites=true&w=majority'),
+    MongooseModule.forRoot(
+      'mongodb+srv://smartranking:TRODZkhL1nuI2WkD@rankingnestjs.jidav.mongodb.net/ranking?retryWrites=true&w=majority',
+      {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false
+      }
+    ),
   ],
   controllers: [AppController],
   providers: [AppService],
