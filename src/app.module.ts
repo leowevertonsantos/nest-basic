@@ -3,6 +3,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PlayersModule } from './players/players.module';
+import { CategoriesModule } from './categories/categories.module';
+import { ChallengeModule } from './challenge/challenge.module';
 
 @Module({
   imports: [
@@ -16,6 +18,8 @@ import { PlayersModule } from './players/players.module';
         useFindAndModify: false
       }
     ),
+    CategoriesModule,
+    ChallengeModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,9 +1,13 @@
+import { IsEmail, IsNotEmpty } from "class-validator";
+
 export class CreatePlayersDTO {
 
-    constructor(
-        public cellPhone: string,
-        public email: string,
-        public name: string,
-    ) { }
+    @IsNotEmpty()
+    public cellPhone: string;
 
+    @IsEmail()
+    public email: string;
+
+    @IsNotEmpty()
+    public name: string;
 } 
